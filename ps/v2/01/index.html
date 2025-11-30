@@ -49,18 +49,18 @@
       box-shadow:var(--shadow);
       margin-top:22px;
     }
-    h2 {
-      font-size:1.15rem;
-      margin:0 0 6px 0;
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color: transparent;
-    }
     h1 {
       font-size:1.5rem;
       font-weight:800;
       text-align:center;
       margin-bottom:12px;
+      padding: 0 22px;
+    }
+    h2 {
+      font-size:1.15rem;
+      margin:0 0 6px 0;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;
     }
     .category-title, .section-title {
       font-size:1.25rem;
@@ -69,12 +69,11 @@
       margin-bottom:14px;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       -webkit-background-clip:text;
-      -webkit-text-fill-color: transparent;
     }
     .info {
-      color:var(--muted);
-      line-height:1.55;
-      text-align:right;
+      color: var(--muted);
+      line-height: 1.55;
+      text-align: justify;
     }
     .buttons { margin-top:14px; }
     .btn {
@@ -116,11 +115,13 @@
     @media (max-width:600px){
       .container { padding:16px; }
       .card { padding:18px; }
+      h1 { padding:0 16px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1>Download Game Guardian APK</h1>
     <section class="card">
       <div class="download-item">
         <h2 id="file-title">📥 Game Guardian (Original)</h2>
