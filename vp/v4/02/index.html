@@ -230,7 +230,7 @@
 
     document.querySelectorAll('.btn[data-link]').forEach(btn => {
       btn.addEventListener('click', () => {
-        window.location.href = btn.getAttribute('data-link');
+        window.open(btn.getAttribute('data-link'), '_blank');
       });
       btn.addEventListener('contextmenu', e => e.preventDefault());
     });
