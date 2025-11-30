@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download Parallel Space APK - Droid Ciyus</title>
-  <meta property="og:title" content="Parallel Space APK">
-  <meta property="og:description" content="Download Parallel Space Terbaru">
-  <meta property="og:type" content="website">
+  <title>Download Parallel Space - Droid Ciyus</title>
   <style>
     :root {
       --bg: #f2f4f8;
@@ -193,6 +190,7 @@
       <div class="section-title">📌 Cara Download</div>
       <ol>
         <li>Klik salah satu tombol "Download" di atas.</li>
+        <li>Klik "Verify you are human".</li>
         <li>Pilih "I'm a Human".</li>
         <li>Klik "Download File".</li>
       </ol>
@@ -219,7 +217,8 @@
 
     document.querySelectorAll('.btn[data-link]').forEach(btn => {
       btn.addEventListener('click', () => {
-        window.location.href = btn.getAttribute('data-link');
+        // Open the link in a new tab
+        window.open(btn.getAttribute('data-link'), '_blank');
       });
       btn.addEventListener('contextmenu', e => e.preventDefault());
     });
