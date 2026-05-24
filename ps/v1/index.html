@@ -3,169 +3,194 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parallel Space - Droid Ciyus</title>
-
+  <title>Download Parallel Space - Droid Ciyus</title>
   <style>
     :root {
       --bg: #f2f4f8;
-      --card: rgba(255,255,255,0.78);
-      --text: #111827;
-      --muted: #6b7280;
-      --accent1: #007BFF;
+      --card: rgba(255, 255, 255, 0.75);
+      --text: #0c1222;
+      --muted: #5f6c89;
+      --accent: #007BFF;
       --accent2: #0056b3;
-      --shadow: 0 10px 30px rgba(0,0,0,0.10);
+      --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     }
 
     [data-theme="dark"] {
       --bg: #050b17;
-      --card: rgba(17,24,39,0.70);
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --accent1: #3b82f6;
-      --accent2: #2563eb;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --card: rgba(16, 24, 42, 0.55);
+      --text: #e8efff;
+      --muted: #9fb7dd;
+      --accent: #4f8bff;
+      --accent2: #82afff;
+      --shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
     }
 
     * {
       box-sizing: border-box;
-      font-family: Inter, system-ui, Arial, sans-serif;
+      font-family: "Inter", system-ui, Roboto, Arial, sans-serif;
     }
 
     body {
       margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      /* Tambahan agar konten benar-benar center */
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: var(--bg);
-      color: var(--text);
       padding: 20px;
-      user-select: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .card {
-      width: 100%;
-      max-width: 360px;
       background: var(--card);
-      backdrop-filter: blur(16px);
-      border-radius: 22px;
-      padding: 30px 24px;
-      text-align: center;
+      backdrop-filter: blur(18px);
+      border-radius: 18px;
+      padding: 26px;
       box-shadow: var(--shadow);
+
+      /* Konten center */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 1.7rem;
-      font-weight: 800;
+    .download-item {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 10px 0;
+      color: var(--text);
     }
 
     .info {
-      margin-top: 12px;
-      font-size: 0.96rem;
-      line-height: 1.6;
       color: var(--muted);
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .buttons {
+      margin-top: 18px;
     }
 
     .btn {
-      margin-top: 24px;
-      width: 100%;
-      border: none;
-      border-radius: 14px;
-      padding: 14px;
-      font-size: 1rem;
-      font-weight: 700;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
       color: white;
-      cursor: pointer;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      box-shadow: 0 5px 18px rgba(37,99,235,0.35);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
       transition: 0.2s;
+      cursor: pointer;
+      border: none;
+      min-width: 160px;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+      opacity: 0.92;
+      transform: translateY(-1px);
     }
 
     #toggleTheme {
       position: fixed;
-      bottom: 18px;
-      right: 18px;
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      bottom: 20px;
+      right: 20px;
       background: var(--card);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
+      padding: 10px 12px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
       cursor: pointer;
-      font-size: 1.1rem;
+      box-shadow: var(--shadow);
     }
 
-    @media (max-width: 480px) {
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 16px;
+      }
+
       .card {
-        max-width: 100%;
-        padding: 28px 20px;
+        padding: 24px 18px;
       }
 
-      h1 {
-        font-size: 1.5rem;
+      h2 {
+        font-size: 1.1rem;
       }
 
-      .info {
-        font-size: 0.92rem;
+      .btn {
+        width: 100%;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="card">
-    <h1>Parallel Space</h1>
+  <div class="container">
+    <section class="card">
+      <div class="download-item">
 
-    <p class="info">
-      Aplikasi untuk menjalankan clone aplikasi dan multi akun Android dengan ringan dan stabil.
-    </p>
+        <h2>📥 Parallel Space</h2>
 
-    <button class="https://zona-download.github.io/dc/ps/a9" id="downloadBtn">
-      Download
-    </button>
+        <p class="info">
+          Aplikasi untuk sistem operasi Android
+        </p>
+
+        <div class="buttons">
+          <button class="btn" data-link="https://zona-download.github.io/dc/ps/a9">
+            Download
+          </button>
+        </div>
+
+      </div>
+    </section>
   </div>
 
-  <div id="toggleTheme">🌙</div>
+  <div id="toggleTheme">🌙 / ☀️</div>
 
   <script>
-    const toggle = document.getElementById("toggleTheme");
+    const toggle = document.getElementById('toggleTheme');
+    const saved = localStorage.getItem('theme');
 
-    // Load theme
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      toggle.textContent = "☀️";
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
 
-    // Toggle theme
-    toggle.addEventListener("click", () => {
-      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    toggle.addEventListener('click', () => {
+      const now =
+        document.documentElement.getAttribute('data-theme') === 'dark'
+          ? 'light'
+          : 'dark';
 
-      if (isDark) {
-        document.documentElement.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-        toggle.textContent = "🌙";
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-        toggle.textContent = "☀️";
-      }
+      document.documentElement.setAttribute('data-theme', now);
+      localStorage.setItem('theme', now);
     });
 
-    // Disable inspect basic
-    document.addEventListener("contextmenu", e => e.preventDefault());
-    document.addEventListener("copy", e => e.preventDefault());
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+
+    document.querySelectorAll('.btn[data-link]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = btn.getAttribute('data-link');
+      });
+
+      btn.addEventListener('contextmenu', e => e.preventDefault());
+    });
   </script>
 
 </body>
