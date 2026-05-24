@@ -145,10 +145,10 @@
     <section class="card">
       <div class="download-item">
 
-        <h2>📥 Parallel Space</h2>
+        <h2>Parallel Space</h2>
 
         <p class="info">
-          Aplikasi untuk sistem operasi Android
+          Aplikasi virtual space yang dibuat khusus untuk menjalankan game guardian tanpa root.
         </p>
 
         <div class="buttons">
@@ -156,31 +156,25 @@
             Download
           </button>
         </div>
-
       </div>
+      <div class="section-title">📝 Catatan</div>
+      <p class="info">Gunakan browser Firefox atau Brave untuk pengalaman terbaik.</p>
     </section>
+    <footer>© <span id="year"></span> ❤️ Droid Ciyus</footer>
   </div>
-
   <div id="toggleTheme">🌙 / ☀️</div>
-
   <script>
     const toggle = document.getElementById('toggleTheme');
     const saved = localStorage.getItem('theme');
-
-    if (saved === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
 
     toggle.addEventListener('click', () => {
-      const now =
-        document.documentElement.getAttribute('data-theme') === 'dark'
-          ? 'light'
-          : 'dark';
-
+      const now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', now);
       localStorage.setItem('theme', now);
     });
 
+    document.getElementById('year').textContent = new Date().getFullYear();
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
 
@@ -188,10 +182,8 @@
       btn.addEventListener('click', () => {
         window.location.href = btn.getAttribute('data-link');
       });
-
       btn.addEventListener('contextmenu', e => e.preventDefault());
     });
   </script>
-
 </body>
 </html>
